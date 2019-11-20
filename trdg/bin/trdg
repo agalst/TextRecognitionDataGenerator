@@ -318,6 +318,7 @@ def main():
             args.include_letters,
             args.include_numbers,
             args.include_symbols,
+            args.include_custom,
             args.language,
         )
         # Set a name format compatible with special characters automatically if they are used
