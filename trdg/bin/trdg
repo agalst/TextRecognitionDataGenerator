@@ -326,6 +326,7 @@ def main():
             args.include_letters,
             args.include_numbers,
             args.include_symbols,
+            args.include_custom,
         ):
             args.name_format = 2
     else:
