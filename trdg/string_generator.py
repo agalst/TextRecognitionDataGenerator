@@ -98,7 +98,7 @@ def create_strings_randomly(length, allow_variable, count, let, num, sym, custom
     if sym:
         pool += "!\"#$%&'()*+,-./:;?@[\\]^_`{|}~"        
     if custom:
-        pool = "/+,-0123456789" + string.ascii_letters
+        pool = "+,-0123456789" + string.ascii_letters
     if lang == "cn":
         min_seq_len = 1
         max_seq_len = 2
