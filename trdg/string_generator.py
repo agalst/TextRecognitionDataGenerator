@@ -76,7 +76,7 @@ def create_strings_from_wikipedia(minimum_length, count, lang):
     return sentences[0:count]
 
 
-def create_strings_randomly(length, allow_variable, count, let, num, sym, lang):
+def create_strings_randomly(length, allow_variable, count, let, num, sym, custom, lang):
     """
         Create all strings by randomly sampling from a pool of characters.
     """
@@ -96,8 +96,9 @@ def create_strings_randomly(length, allow_variable, count, let, num, sym, lang):
     if num:
         pool += "0123456789"
     if sym:
-        pool += "!\"#$%&'()*+,-./:;?@[\\]^_`{|}~"
-
+        pool += "!\"#$%&'()*+,-./:;?@[\\]^_`{|}~"        
+    if custom:
+        pool = "/+,-0123456789" + string.ascii_letters
     if lang == "cn":
         min_seq_len = 1
         max_seq_len = 2
