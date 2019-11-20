@@ -89,6 +89,13 @@ def parse_arguments():
         default=False,
     )
     parser.add_argument(
+        "-custom",
+        "--include_custom",
+        action="store_true",
+        help="Define if random sequences should contain custom charset +,/0123456789 + letters. Only works with -rs",
+        default=False,
+    )
+    parser.add_argument(
         "-w",
         "--length",
         type=int,
