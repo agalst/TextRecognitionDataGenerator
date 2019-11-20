@@ -15,6 +15,7 @@ class GeneratorFromRandom:
         use_letters=True,
         use_numbers=True,
         use_symbols=True,
+        use_custom = True,
         fonts=[],
         language="en",
         size=32,
@@ -40,6 +41,7 @@ class GeneratorFromRandom:
         self.use_letters = use_letters
         self.use_numbers = use_numbers
         self.use_symbols = use_symbols
+        self.use_custom = use_custom
         self.language = language
         self.generator = GeneratorFromStrings(
             create_strings_randomly(
@@ -49,6 +51,7 @@ class GeneratorFromRandom:
                 self.use_letters,
                 self.use_numbers,
                 self.use_symbols,
+                self.use_custom,
                 self.language,
             ),
             count,
@@ -87,6 +90,7 @@ class GeneratorFromRandom:
                 self.use_letters,
                 self.use_numbers,
                 self.use_symbols,
+                self.use_custom,
                 self.language,
             )
         return self.generator.next()
