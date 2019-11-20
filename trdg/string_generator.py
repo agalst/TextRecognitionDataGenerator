@@ -82,7 +82,7 @@ def create_strings_randomly(length, allow_variable, count, let, num, sym, custom
     """
 
     # If none specified, use all three
-    if True not in (let, num, sym):
+    if True not in (let, num, sym, custom):
         let, num, sym = True, True, True
 
     pool = ""
